@@ -36,11 +36,10 @@ local FindFirstChild = Instancenew("Part").FindFirstChild
 -- // Silent Aim Vars
 getgenv().ValiantAimHacks = {
     SilentAimEnabled = true,
-    ShowFOV = false,
-    FOVSides = 4,
+    FOVSides = 12,
     VisibleCheck = false,
     TeamCheck = true,
-    FOV = 5,
+    FOV = 1,
     HitChance = 100,
     Selected = LocalPlayer,
     SelectedPart = nil,
@@ -55,25 +54,6 @@ getgenv().ValiantAimHacks = {
     WhitelistedPUIDs = {91318356},
 }
 local ValiantAimHacks = getgenv().ValiantAimHacks
-
--- // Show FOV
-local circle = Drawingnew("Circle")
-circle.Transparency = 1
-circle.Thickness = 2
-circle.Color = Color3fromRGB(231, 84, 128)
-circle.Filled = false
-function ValiantAimHacks.updateCircle()
-    if (circle) then
-        -- // Set Circle Properties
-        circle.Visible = ValiantAimHacks.ShowFOV
-        circle.Radius = (ValiantAimHacks.FOV * 3)
-        circle.Position = Vector2new(Mouse.X, Mouse.Y + GetGuiInset(GuiService).Y)
-        circle.NumSides = ValiantAimHacks.FOVSides
-
-        -- // Return circle
-        return circle
-    end
-end
 
 -- // Custom Functions
 local calcChance = function(percentage)
