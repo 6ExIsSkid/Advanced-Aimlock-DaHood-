@@ -1,4 +1,4 @@
-
+SilentAimButton.MouseButton1Click:Connect(function()
 local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/6ExIsSkid/Advanced-Aimlock-DaHood-/main/SCSA"))()
 Aiming.TeamCheck(false)
 
@@ -59,3 +59,4 @@ RunService:BindToRenderStep("AimLock", 0, function()
         CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
     end
     end)
+end)
