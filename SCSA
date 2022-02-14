@@ -1,4 +1,4 @@
-SilentAimButton.MouseButton1Click:Connect(function()
+
 if getgenv().Aiming then return getgenv().Aiming end
 
 -- // Services
@@ -437,4 +437,3 @@ end)
 
 -- //
 return Aiming
-end)
